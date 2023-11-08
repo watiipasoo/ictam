@@ -10,9 +10,6 @@ class EmailController extends Controller
 {
     public function sendEmail(Request $request)
     {
-        // $email = $request->input('email');
-        // $name = $request->input('name');
-
         Mail::to('watipasochirambo5@gmail.com')->send(new AlertEmail('watipaso.chirambo@nicotechnologies.com'));
         return response()->json(['message' => 'Email sent']);
     }
